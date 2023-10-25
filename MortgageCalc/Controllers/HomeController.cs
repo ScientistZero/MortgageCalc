@@ -39,6 +39,18 @@ namespace MortgageCalc.Controllers
             return View(loan);
         }
 
+        [HttpPost]
+        [AutoValidateAntiforgeryToken]
+        public IActionResult App(Loan loan)
+        {
+            //Calculate Loan
+
+
+            return View(loan);
+
+
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
