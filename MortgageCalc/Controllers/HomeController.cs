@@ -29,7 +29,7 @@ namespace MortgageCalc.Controllers
             Loan loan = new();
 
             loan.Payment = 0.0m;
-            loan.TotalIntrest = 0.0m;
+            loan.TotalInterest = 0.0m;
             loan.TotalCost = 0.0m;
             loan.Rate = 3.5m;
             loan.Amount = 150000m;

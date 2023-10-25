@@ -31,7 +31,20 @@
             <p id="payment">
                 @Model.Payment.ToString("C")
             </p>
-
+            <div class="row">
+                <div class="col-6">
+                    <label class="text-start">Total Principal</label>
+                </div>
+                <div class="col-6 text-end" id="totalPrincipal">
+                    @Model.Amount.ToString("C")
+                </div>
+                <div class="col-6">
+                    <label class="text-start">Total Interest</label>
+                </div>
+                <div class="col-6 text-end" id="totalInterest">
+                    @Model.TotalInterest.ToString("C")
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
