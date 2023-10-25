@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MortgageCalc.Models;
 using System.Diagnostics;
-
+using MortgageCalc.Helpers;
 namespace MortgageCalc.Controllers
 {
     public class HomeController : Controller
@@ -32,7 +32,7 @@ namespace MortgageCalc.Controllers
             loan.TotalInterest = 0.0m;
             loan.TotalCost = 0.0m;
             loan.Rate = 3.5m;
-            loan.Amount = 150000m;
+            loan.Amount = 15000m;
             loan.Term = 60;
 
 
@@ -43,10 +43,13 @@ namespace MortgageCalc.Controllers
         [AutoValidateAntiforgeryToken]
         public IActionResult App(Loan loan)
         {
-            //Calculate Loan
+            //Calculate Loan and get the payment
+            var loanHelper = new LoanHelper();
+
+            Loan newLoan = loanHelper.GetPayments(loan);
 
 
-            return View(loan);
+            return View(newLoan);
 
 
         }

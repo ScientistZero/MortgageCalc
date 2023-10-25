@@ -28,7 +28,7 @@ namespace MortgageCalc.Helpers
                 loanPayment.Payment = loan.Payment;
                 loanPayment.MonthlyPrincipal = monthlyPrincipal;
                 loanPayment.MonthlyInterest = monthlyInterest;
-                loanPayment.ToaalInterest = totalInterest;
+                loanPayment.TotalInterest = totalInterest;
                 loanPayment.Balance = balance;
 
                 //Push the object into the loan model
@@ -36,16 +36,16 @@ namespace MortgageCalc.Helpers
             }
 
             loan.TotalInterest = totalInterest;
-            loan.TotalCost = loan.Amount = totalInterest;
+            loan.TotalCost = loan.Amount + totalInterest;
 
             return loan;
             //Calculate a payment schedule
 
-            //Pushb payments into the loan
+            //Push payments into the loan
 
             //Return the loan to the view
 
-            return loan;
+            
         }
 
         private decimal CalcPayment(decimal amount, decimal rate, int term)
