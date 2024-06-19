@@ -6,7 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	  <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 	  <InvariantGlobalization>true</InvariantGlobalization>
+	  <UserSecretsId>b75dd4b6-33f0-4c63-aba4-2ffa0ad238e4</UserSecretsId>
+	  <DockerfileContext>.</DockerfileContext>
 	  
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
 
 </Project>
