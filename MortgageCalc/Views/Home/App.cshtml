@@ -31,26 +31,26 @@
                 <p>Your Monthly Payment</p>
             </div>
             <p id="payment">
-                @Model.Payment.ToString("C", CultureInfo.GetCultureInfo("en-US"))
+                @Model.Payment.ToString("C")
             </p>
             <div class="row">
                 <div class="col-6">
                     <label class="text-start">Total Principal</label>
                 </div>
                 <div class="col-6 text-end" id="totalPrincipal">
-                    @Model.Amount.ToString("C", CultureInfo.GetCultureInfo("en-US"))
+                    @Model.Amount.ToString("C")
                 </div>
                 <div class="col-6">
                     <label class="text-start">Total Interest</label>
                 </div>
                 <div class="col-6 text-end" id="totalInterest">
-                    @Model.TotalInterest.ToString("C", CultureInfo.GetCultureInfo("en-US"))
+                    @Model.TotalInterest.ToString("C")
                 </div>
                 <div class="col-6">
                     <label class="text-start">Total Cost</label>
                 </div>
                 <div class="col-6 text-end" id="totalCost">
-                    @Model.TotalCost.ToString("C", CultureInfo.GetCultureInfo("en-US"))
+                    @Model.TotalCost.ToString("C")
                 </div>
             </div>
         </div>
@@ -75,12 +75,12 @@
                         @foreach (var item in Model.Payments)
                         {
                             <tr>
-                                 <td align="justify">@item.Month.ToString()</td>
-                                    <td align="justify">@item.Payment.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
-                                    <td align="justify">@item.MonthlyPrincipal.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
-                                    <td align="justify">@item.MonthlyInterest.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
-                                    <td align="justify">@item.TotalInterest.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
-                                    <td align="justify">@item.Balance.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
+                                  <td>@item.Month</td>
+                                  <td>@item.Payment.ToString("C")</td>
+                                  <td>@item.MonthlyPrincipal.ToString("C")</td>
+                                  <td>@item.MonthlyInterest.ToString("C")</td>
+                                  <td>@item.TotalInterest.ToString("C")</td>
+                                  <td>@item.Balance.ToString("C")</td>
                             </tr>
                         }
                     </tbody>
