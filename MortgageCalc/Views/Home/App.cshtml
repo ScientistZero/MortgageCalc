@@ -1,4 +1,4 @@
-﻿@using System.Globalization;
+﻿﻿@using System.Globalization;
 @model MortgageCalc.Models.Loan
 @{
 }
@@ -75,12 +75,12 @@
                         @foreach (var item in Model.Payments)
                         {
                             <tr>
-                                  <td>@item.Month</td>
-                                  <td>@item.Payment.ToString("C")</td>
-                                  <td>@item.MonthlyPrincipal.ToString("C")</td>
-                                  <td>@item.MonthlyInterest.ToString("C")</td>
-                                  <td>@item.TotalInterest.ToString("C")</td>
-                                  <td>@item.Balance.ToString("C")</td>
+                                <td>@item.Month</td>
+                                <td>@item.Payment.ToString("C")</td>
+                                <td>@item.MonthlyPrincipal.ToString("C")</td>
+                                <td>@item.MonthlyInterest.ToString("C")</td>
+                                <td>@item.TotalInterest.ToString("C")</td>
+                                <td>@item.Balance.ToString("C")</td>
                             </tr>
                         }
                     </tbody>

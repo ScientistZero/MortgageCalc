@@ -5,14 +5,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 	  <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-	  <InvariantGlobalization>true</InvariantGlobalization>
+	  <InvariantGlobalization>false</InvariantGlobalization>
 	  <UserSecretsId>b75dd4b6-33f0-4c63-aba4-2ffa0ad238e4</UserSecretsId>
 	  <DockerfileContext>.</DockerfileContext>
+  	 
+
 	  
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.9" />
   </ItemGroup>
 
 </Project>
