@@ -75,11 +75,11 @@
                         {
                             <tr>
                                 <td>@item.Month</td>
-                                <td>@item.Payment.ToString("C")</td>
-                                <td>@item.MonthlyPrincipal.ToString("C")</td>
-                                <td>@item.MonthlyInterest.ToString("C")</td>
-                                <td>@item.TotalInterest.ToString("C")</td>
-                                <td>@item.Balance.ToString("C")</td>
+                                <td>@item.Payment.ToString("C", CultureInfo.GetCultureInfo("en-US")))</td>
+                                <td>@item.MonthlyPrincipal.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
+                                <td>@item.MonthlyInterest.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
+                                <td>@item.TotalInterest.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
+                                <td>@item.Balance.ToString("C", CultureInfo.GetCultureInfo("en-US"))</td>
                             </tr>
                         }
                     </tbody>
