@@ -31,26 +31,26 @@
                 <p>Your Monthly Payment</p>
             </div>
             <p id="payment">
-                @Model.Payment.ToString("C")
+                @Model.Payment.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))
             </p>
             <div class="row">
                 <div class="col-6">
                     <label class="text-start">Total Principal</label>
                 </div>
                 <div class="col-6 text-end" id="totalPrincipal">
-                    @Model.Amount.ToString("C")
+                    @Model.Amount.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))
                 </div>
                 <div class="col-6">
                     <label class="text-start">Total Interest</label>
                 </div>
                 <div class="col-6 text-end" id="totalInterest">
-                    @Model.TotalInterest.ToString("C")
+                    @Model.TotalInterest.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))
                 </div>
                 <div class="col-6">
                     <label class="text-start">Total Cost</label>
                 </div>
                 <div class="col-6 text-end" id="totalCost">
-                    @Model.TotalCost.ToString("C")
+                    @Model.TotalCost.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))
                 </div>
             </div>
         </div>
